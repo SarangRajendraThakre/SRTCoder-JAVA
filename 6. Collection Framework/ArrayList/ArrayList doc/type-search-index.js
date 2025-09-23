@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"MyArrayList"},{"p":"<Unnamed>","l":"MyArrayListDriver"},{"p":"<Unnamed>","l":"MyCollection"},{"p":"<Unnamed>","l":"MyList"}];updateSearchResults();

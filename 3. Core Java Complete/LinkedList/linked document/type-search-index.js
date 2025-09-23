@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"MyIndexOutOfBoundsException"},{"p":"<Unnamed>","l":"MyLinkedList"},{"p":"<Unnamed>","l":"MyLinkedListDriver"},{"p":"<Unnamed>","l":"MyNoSuchElementException"}];updateSearchResults();

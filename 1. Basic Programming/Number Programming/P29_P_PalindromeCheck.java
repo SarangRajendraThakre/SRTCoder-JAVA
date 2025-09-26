@@ -11,6 +11,20 @@ public class P29_P_PalindromeCheck {
         isPalindrome(num);
 
 
+        String result =  new StringBuilder(String.valueOf(num))
+                  .reverse()
+                  .toString();
+
+         
+         if(Integer.parseInt(result)==num){
+            System.out.println("The string is palindrone");
+         }
+         else
+         {
+            System.out.println("The string is not palilndrome");
+         }
+
+
     }
     public static void isPalindrome(int num)
     {
@@ -22,6 +36,10 @@ public class P29_P_PalindromeCheck {
         
         }
         System.out.println(temp==reversed);
+
+
+        
+                 
         
     }
 }

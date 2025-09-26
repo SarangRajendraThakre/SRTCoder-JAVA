@@ -3,36 +3,30 @@ import java.util.Scanner;
 public class P32_P_ProductOfDigits {
 
     public static void main(String[] args) {
-        // Your code here
-
-        // Write a program to find the product of digits of a number.
-
-        
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number for Product");
+        System.out.println("Enter the number for product:");
         int num = sc.nextInt();
 
-        
-     System.out.println(product(num));
+        // Using traditional method
+        System.out.println("Using loop: " + product(num));
 
+        // Using Stream API
+        int productStream = String.valueOf(num)
+                .chars() // IntStream of chars
+                .map(c -> Character.getNumericValue(c)) // convert char to int
+                .reduce(1, (a, b) -> a * b); // multiply all digits
 
+        System.out.println("Using Stream: " + productStream);
     }
-    public static int product(int num)
-    {
-        if(num ==0)
-        {
+
+    public static int product(int num) {
+        if (num == 0)
             return 0;
-        }
-        if(num ==1){
-            return 1;
-        }
         int product = 1;
-        while (num >0) {
-            product*=num%10;
-            num/=10;
+        while (num > 0) {
+            product *= num % 10;
+            num /= 10;
         }
         return product;
-
-
     }
 }

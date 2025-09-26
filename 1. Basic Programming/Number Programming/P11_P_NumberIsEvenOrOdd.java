@@ -7,19 +7,17 @@ public class P11_P_NumberIsEvenOrOdd {
 
         // Write a program to check if a number is even or odd.
 
-         System.out.println("Enter the number ");
-        Scanner sc = new Scanner( System.in);
+        System.out.println("Enter the number ");
+        Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        if(n %2 ==0)
-        {
+        if (n % 2 == 0) {
             System.out.println("Number is even");
-        }
-        else
-        {
+        } else {
             System.out.println("Number is odd");
         }
 
-
+        String result = (n % 2 == 0) ? n + " is Even" : n + " is Odd";
+        System.out.println(result);
 
     }
 }

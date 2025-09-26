@@ -36,9 +36,9 @@ public class P70_P_1_n_HappyNumber {
 
         for (int i = 1; i < num; i++) {
             if (isHappyNumber(i)) {
-                System.out.print(i+" ");
+                System.out.print(i + " ");
 
-            } 
+            }
 
         }
 

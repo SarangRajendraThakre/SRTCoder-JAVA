@@ -18,39 +18,31 @@ public class P58_P_HarshadNO {
         // in no remainder (i.e., the original number is perfectly divisible), it is a
         // Harshad number
 
-            Scanner sc = new Scanner(System.in);
-    System.out.println("Enter the number");
-    int n = sc.nextInt();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int n = sc.nextInt();
 
-    for(int i = 1;i<n;i++)
-    {
-       if(isHarshadNo(i))
-     {
-        System.out.println( i+" ");
-     }
-    
+        for (int i = 1; i < n; i++) {
+            if (isHarshadNo(i)) {
+                System.out.println(i + " ");
+            }
 
-    }
-
-    
+        }
 
     }
-    public static boolean isHarshadNo(int num)
-    {
+
+    public static boolean isHarshadNo(int num) {
         int temp = num;
-         int sum = 0 ;
-         while (num>0) {
-             sum+= num%10;
-             num/=10;
-         }
-         if(temp % sum == 0 )
-         {
+        int sum = 0;
+        while (num > 0) {
+            sum += num % 10;
+            num /= 10;
+        }
+        if (temp % sum == 0) {
             return true;
-         }
-        else
-         {
+        } else {
             return false;
-         }
-        
+        }
+
     }
 }

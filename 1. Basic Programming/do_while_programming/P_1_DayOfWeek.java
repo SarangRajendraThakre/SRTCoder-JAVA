@@ -10,7 +10,7 @@ class P_1_DayOfWeek {
 
         while (!validInput) { // Loop continues as long as input is not valid
             System.out.println("Enter a number between 1 and 7 to get the day of the week:");
-            
+
             // Check if the next input is an integer
             if (sc.hasNextInt()) {
                 day = sc.nextInt(); // Read the integer

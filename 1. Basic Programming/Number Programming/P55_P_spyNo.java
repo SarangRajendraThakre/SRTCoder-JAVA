@@ -16,14 +16,11 @@ public class P55_P_spyNo {
     System.out.println("Enter the number");
     int n = sc.nextInt();
 
-    for(int i = 1;i<=n;i++)
-    {
-         if (isSpyNo(i)) {
-      System.out.println(i+" ");
-    } 
+    for (int i = 1; i <= n; i++) {
+      if (isSpyNo(i)) {
+        System.out.println(i + " ");
+      }
     }
-
- 
 
   }
 

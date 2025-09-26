@@ -9,13 +9,11 @@ public class P47_P_PerfectNumber {
         System.out.println("Enter the number : ");
         int n = sc.nextInt();
 
-
         System.out.println(isPerfectNumber(n));
-        
 
     }
-    public static boolean isPerfectNumber(int n)
-    {
+
+    public static boolean isPerfectNumber(int n) {
         int sum = 0;
         for (int i = 1; i < n; i++) {
             int temp = n;
@@ -25,9 +23,8 @@ public class P47_P_PerfectNumber {
 
         }
         if (sum == n) {
-           return true;
-        }
-        else{
+            return true;
+        } else {
             return false;
         }
     }

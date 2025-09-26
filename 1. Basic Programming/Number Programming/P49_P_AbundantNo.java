@@ -26,34 +26,27 @@ public class P49_P_AbundantNo {
 
         // Since 9 < 15, → 15 is NOT Abundant.
 
-          Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number : ");
         int n = sc.nextInt();
 
-        if(isAbundantNo(n))
-        {
+        if (isAbundantNo(n)) {
             System.out.println("The number is AbundantNo");
-        }
-        else
-        {
+        } else {
             System.out.println("The number is not Abundantno");
         }
 
-
     }
-    public static boolean isAbundantNo(int n)
-    {
+
+    public static boolean isAbundantNo(int n) {
         int sum = 0;
         int temp = n;
-        for(int i =1;i<n;i++)
-        {
-            if(n%i==0)
-            {
-                sum+=i;
+        for (int i = 1; i < n; i++) {
+            if (n % i == 0) {
+                sum += i;
             }
         }
-        if(sum>temp)
-        {
+        if (sum > temp) {
             return true;
         }
         return false;

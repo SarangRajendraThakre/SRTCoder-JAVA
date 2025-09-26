@@ -1,46 +1,46 @@
 
-public class P42_P_ {
+// public class P42_P_ {
 
-    public static void main(String[] args) {
-        // Your code here
-        Armstrong number
+//     public static void main(String[] args) {
+//         // Your code here
+// //         Armstrong number
 
-Strong (Krishnamurthy) number
+// // Strong (Krishnamurthy) number
 
-Perfect number
+// // Perfect number
 
-Abundant number
+// // Abundant number
 
-Deficient number
+// // Deficient number
 
-Neon number
+// // Neon number
 
-Spy number
+// // Spy number
 
-Automorphic number
+// // Automorphic number
 
-Harshad (Niven) number
+// // Harshad (Niven) number
 
-Duck number
+// // Duck number
 
-Sunny number
+// // Sunny number
 
-Magic number
+// // Magic number
 
-Kaprekar number
+// // Kaprekar number
 
-Tech number
+// // Tech number
 
-Trimorphic number
+// // Trimorphic number
 
-Evil number
+// // Evil number
 
-Odious number
+// // Odious number
 
-Disarium number
+// // Disarium number
 
-Happy number
+// // Happy number
 
-Sad number
-    }
-}
+// // Sad number
+// //     }
+// // }

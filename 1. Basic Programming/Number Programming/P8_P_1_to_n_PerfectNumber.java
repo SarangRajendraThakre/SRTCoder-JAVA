@@ -3,22 +3,14 @@ import java.util.Scanner;
 public class P8_P_1_to_n_PerfectNumber {
 
     public static void main(String[] args) {
-        // Your code here
 
-        // 6
-
+        // Perfect Number is a proper divisor sum equals perfect number
         // Proper divisors: 1, 2, 3
-
         // Sum: 1 + 2 + 3 = 6 ✅ → Perfect
-
         // 28
-
         // Proper divisors: 1, 2, 4, 7, 14
-
         // Sum: 1 + 2 + 4 + 7 + 14 = 28 ✅ → Perfect
-
         // 496
-
         // Proper divisors sum to 496 ✅ → Perfect
 
         Scanner sc = new Scanner(System.in);

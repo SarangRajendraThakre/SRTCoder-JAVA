@@ -6,6 +6,7 @@ public class P4_P_squareCube {
 
         // Write a program to find the square and cube of a number.
 
-        System.out.println("square : "+4*4 +" cube : "+ 5*5*5);
+        System.out.println("square : " + 4 * 4 + " cube : " + 5 * 5 * 5);
+        System.out.println(Math.pow(2, 3));
     }
 }

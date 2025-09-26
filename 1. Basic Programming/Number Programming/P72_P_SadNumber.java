@@ -2,6 +2,9 @@
 public class P72_P_SadNumber {
 
 
+// A Sad Number (also called an Unhappy Number) is the opposite of a Happy Number.
+    
+
     // Function to check if a number is happy
     static boolean isHappy(int n) {
         while (n != 1 && n != 4) {

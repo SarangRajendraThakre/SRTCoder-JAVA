@@ -30,13 +30,23 @@ public class P30_P_ArmstrongNO {
     }
 
     public static void isArmstrongNo(int num, int length) {
-        int temp = num;
-        int sum = 0;
-        while (temp > 0) {
-          
-            sum += power(temp % 10, length);
-            temp /= 10;
-        }
+        // int temp = num;
+        // int sum = 0;
+        // while (temp > 0) {
+
+        // sum += power(temp % 10, length);
+        // temp /= 10;
+        // }
+
+        int n = String.valueOf(num).length(); // number of digits
+
+        // Calculate sum of digits^n using streams
+        int sum = String.valueOf(num)
+                .chars() // IntStream of chars
+                .map(c -> Character.getNumericValue(c)) // convert char to int
+                .map(digit -> (int) Math.pow(digit, n)) // digit^n
+                .sum();
+
         if (sum == num) {
             System.out.println(num + " is an Armstrong number.");
         } else {

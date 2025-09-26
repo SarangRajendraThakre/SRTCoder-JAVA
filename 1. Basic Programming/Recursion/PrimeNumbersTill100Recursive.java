@@ -15,7 +15,7 @@ public class PrimeNumbersTill100Recursive {
         if (divisor * divisor > n) {
             return true;
         }
-        return isPrimeRecursive(n, divisor + 1);
+        return isPrimeRecursive(n, ++divisor);
     }
 
     public static void printPrimesRecursive(int currentNumber, int limit) {

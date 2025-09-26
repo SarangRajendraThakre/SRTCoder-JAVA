@@ -1,3 +1,4 @@
+import java.util.stream.IntStream;
 
 public class P24_P_1_100odd {
 
@@ -12,6 +13,12 @@ public class P24_P_1_100odd {
             }
             n++;
         }
+
+
+           
+
+
+
 
 
     }

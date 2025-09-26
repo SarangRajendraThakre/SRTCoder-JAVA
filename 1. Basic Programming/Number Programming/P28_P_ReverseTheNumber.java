@@ -11,6 +11,14 @@ public class P28_P_ReverseTheNumber {
 
         reverse(num);
 
+        String reversedStr = new StringBuilder(String.valueOf(num))
+                .reverse()
+                .toString();
+
+        int reversedInt = Integer.parseInt(reversedStr);
+
+        System.out.println("Reversed number as integer: " + reversedInt);
+
     }
 
     public static void reverse(int num) {
@@ -23,7 +31,8 @@ public class P28_P_ReverseTheNumber {
             num /= 10;
         }
 
-        System.out.println("reversed  number : "+reversed );
+        System.out.println("reversed  number : " + reversed);
 
     }
+
 }

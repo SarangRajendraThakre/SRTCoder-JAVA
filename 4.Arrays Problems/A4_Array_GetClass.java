@@ -25,4 +25,5 @@ public class A4_Array_GetClass {
 }
 
 // A helper class for the demo.
-class Student {}
+class Student {
+}

@@ -15,8 +15,9 @@ public class P18_FirstLeastRepeatingElement {
         Integer minElement = null;
         int minCount = Integer.MAX_VALUE;
 
-        for (int i = 0 ,  cnt = 1; i < arr.length; i++ , cnt=1) {
-            if (visited[i]) continue;  // Skip already counted
+        for (int i = 0, cnt = 1; i < arr.length; i++, cnt = 1) {
+            if (visited[i])
+                continue; // Skip already counted
 
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[i] == arr[j]) {

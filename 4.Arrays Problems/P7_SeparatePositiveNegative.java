@@ -6,12 +6,12 @@ public class P7_SeparatePositiveNegative {
 
     public static void main(String[] args) {
         
-        int [] arr = {3,23,5,65,5,57,74,-65,-66};
+        int [] arr = {3,23,5,65,-5,57,74,65,-66};
 
         int left = 0 ;
         int right = arr.length -1;
 
-        while (left <= right) {
+        while (left < right) {
             
             if(arr[left] < 0 )
             {

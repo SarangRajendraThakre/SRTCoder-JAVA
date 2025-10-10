@@ -1,4 +1,3 @@
-package scannerclass;
 
 import java.util.Scanner;
 import java.util.regex.Pattern; // Needed for Pattern object
@@ -27,9 +26,9 @@ public class HasNextMethodsDemonstration {
             System.out.println("\n--- hasNext() ---");
             System.out.println("Input: \"Hello 123\"");
             System.out.println("  hasNext(): " + s.hasNext()); // true
-            System.out.println("  Next token: " + s.next());    // Consumes "Hello"
+            System.out.println("  Next token: " + s.next()); // Consumes "Hello"
             System.out.println("  hasNext(): " + s.hasNext()); // true
-            System.out.println("  Next token: " + s.next());    // Consumes "123"
+            System.out.println("  Next token: " + s.next()); // Consumes "123"
             System.out.println("  hasNext(): " + s.hasNext()); // false (no more tokens)
         }
 
@@ -38,11 +37,11 @@ public class HasNextMethodsDemonstration {
             System.out.println("\n--- hasNextBoolean() ---");
             System.out.println("Input: \"true FALSE not_a_boolean\"");
             System.out.println("  hasNextBoolean(): " + s.hasNextBoolean()); // true
-            System.out.println("  Next boolean: " + s.nextBoolean());       // Consumes "true"
+            System.out.println("  Next boolean: " + s.nextBoolean()); // Consumes "true"
             System.out.println("  hasNextBoolean(): " + s.hasNextBoolean()); // true
-            System.out.println("  Next boolean: " + s.nextBoolean());       // Consumes "FALSE"
+            System.out.println("  Next boolean: " + s.nextBoolean()); // Consumes "FALSE"
             System.out.println("  hasNextBoolean(): " + s.hasNextBoolean()); // false
-            System.out.println("  Remaining: " + s.next());                 // Consumes "not_a_boolean"
+            System.out.println("  Remaining: " + s.next()); // Consumes "not_a_boolean"
         }
 
         // --- hasNextByte(), hasNextShort(), hasNextInt(), hasNextLong() ---
@@ -50,23 +49,23 @@ public class HasNextMethodsDemonstration {
             System.out.println("\n--- hasNextByte(), hasNextShort(), hasNextInt(), hasNextLong() ---");
             System.out.println("Input: \"127 32767 2147483647 9223372036854775807 200 non_num\"");
 
-            System.out.println("  hasNextByte(): " + s.hasNextByte());   // true
-            System.out.println("  Next byte: " + s.nextByte());         // Consumes "127" (max byte value)
+            System.out.println("  hasNextByte(): " + s.hasNextByte()); // true
+            System.out.println("  Next byte: " + s.nextByte()); // Consumes "127" (max byte value)
 
             System.out.println("  hasNextShort(): " + s.hasNextShort()); // true
-            System.out.println("  Next short: " + s.nextShort());       // Consumes "32767" (max short value)
+            System.out.println("  Next short: " + s.nextShort()); // Consumes "32767" (max short value)
 
-            System.out.println("  hasNextInt(): " + s.hasNextInt());   // true
-            System.out.println("  Next int: " + s.nextInt());           // Consumes "2147483647" (max int value)
+            System.out.println("  hasNextInt(): " + s.hasNextInt()); // true
+            System.out.println("  Next int: " + s.nextInt()); // Consumes "2147483647" (max int value)
 
-            System.out.println("  hasNextLong(): " + s.hasNextLong());   // true
-            System.out.println("  Next long: " + s.nextLong());         // Consumes "9223372036854775807" (max long value)
+            System.out.println("  hasNextLong(): " + s.hasNextLong()); // true
+            System.out.println("  Next long: " + s.nextLong()); // Consumes "9223372036854775807" (max long value)
 
             System.out.println("  hasNextByte() for 200: " + s.hasNextByte()); // false (200 is too large for byte)
-            System.out.println("  Next int (the 200): " + s.nextInt());       // Consumes "200" as int
+            System.out.println("  Next int (the 200): " + s.nextInt()); // Consumes "200" as int
 
             System.out.println("  hasNextInt() for non_num: " + s.hasNextInt()); // false
-            System.out.println("  Remaining: " + s.next());                     // Consumes "non_num"
+            System.out.println("  Remaining: " + s.next()); // Consumes "non_num"
         }
 
         // --- hasNextFloat(), hasNextDouble() ---
@@ -74,15 +73,15 @@ public class HasNextMethodsDemonstration {
             System.out.println("\n--- hasNextFloat(), hasNextDouble() ---");
             System.out.println("Input: \"3.14 1.23456789e-5 not_a_float\"");
 
-            System.out.println("  hasNextFloat(): " + s.hasNextFloat());  // true
-            System.out.println("  Next float: " + s.nextFloat());        // Consumes "3.14"
+            System.out.println("  hasNextFloat(): " + s.hasNextFloat()); // true
+            System.out.println("  Next float: " + s.nextFloat()); // Consumes "3.14"
 
             System.out.println("  hasNextDouble(): " + s.hasNextDouble()); // true
-            System.out.println("  Next double: " + s.nextDouble());       // Consumes "1.23456789e-5"
+            System.out.println("  Next double: " + s.nextDouble()); // Consumes "1.23456789e-5"
 
             System.out.println("  hasNextFloat(): " + s.hasNextFloat()); // false
             System.out.println("  hasNextDouble(): " + s.hasNextDouble()); // false
-            System.out.println("  Remaining: " + s.next());                 // Consumes "not_a_float"
+            System.out.println("  Remaining: " + s.next()); // Consumes "not_a_float"
         }
     }
 
@@ -143,7 +142,8 @@ public class HasNextMethodsDemonstration {
             // Now next token is "Date:2025-07-06". We check if *its sub-part* matches.
             // No, hasNext(Pattern) checks the *entire* next token against the pattern.
             // "Date:2025-07-06" does not match "\d{4}-\d{2}-\d{2}".
-            System.out.println("  hasNext(datePattern): " + s.hasNext(datePattern)); // false (token is "Date:2025-07-06")
+            System.out.println("  hasNext(datePattern): " + s.hasNext(datePattern)); // false (token is
+                                                                                     // "Date:2025-07-06")
 
             // To match "2025-07-06" we either need a new token, or use findInLine()
             // Let's re-tokenize to get the date part as a separate token

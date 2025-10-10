@@ -12,6 +12,5 @@ public class P172_UnBoxing {
         System.out.println(obj1);
         System.out.println(num2);
 
-
     }
 }

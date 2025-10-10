@@ -6,9 +6,9 @@ public class A9_Arrays_Method_ComparatorBinarySearch {
 
         // --- Setup ---
         Student[] students = {
-            new Student(105, "Rohan"),
-            new Student(101, "Amit"),
-            new Student(103, "Priya")
+                new Student(105, "Rohan"),
+                new Student(101, "Amit"),
+                new Student(103, "Priya")
         };
 
         // --- Define Custom Sorting Logic ---
@@ -21,7 +21,6 @@ public class A9_Arrays_Method_ComparatorBinarySearch {
         Arrays.sort(students, nameComparator);
         System.out.println("Sorted by name: " + Arrays.toString(students));
         System.out.println("----------------------------------------");
-
 
         // --- Search using the SAME Comparator ---
         // The key object only needs the relevant field for the comparator to work.
@@ -40,7 +39,7 @@ public class A9_Arrays_Method_ComparatorBinarySearch {
             System.out.println("Failure! The student was not found.");
             System.out.println("The method returned: " + foundIndex);
         }
-        
+
     }
 }
 

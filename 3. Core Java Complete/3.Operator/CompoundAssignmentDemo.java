@@ -1,4 +1,3 @@
-package Operator;
 
 public class CompoundAssignmentDemo {
 
@@ -37,9 +36,11 @@ public class CompoundAssignmentDemo {
         System.out.println("b += 20;  => b = " + b + " (10 + 20 = 30)");
 
         // This would cause a COMPILE-TIME ERROR without the cast:
-        // byte result = b + 20; // Error: incompatible types: possible lossy conversion from int to byte
-        // Explanation: b (byte) is promoted to int for the addition, resulting in an int.
-        //              Assigning an int back to a byte requires an explicit cast.
+        // byte result = b + 20; // Error: incompatible types: possible lossy conversion
+        // from int to byte
+        // Explanation: b (byte) is promoted to int for the addition, resulting in an
+        // int.
+        // Assigning an int back to a byte requires an explicit cast.
 
         // Example with overflow
         byte b2 = 100;
@@ -48,12 +49,11 @@ public class CompoundAssignmentDemo {
                   // 150 overflows byte range (-128 to 127), so it wraps around.
         System.out.println("b2 += 50; => b2 = " + b2 + " (Overflow: 100 + 50 = 150 -> -106)");
 
-
         // --- 2. Bitwise Compound Assignment Operators ---
         System.out.println("\n--- Bitwise Operators ---");
 
         int y = 12; // Binary: 0000...1100
-        int z = 5;  // Binary: 0000...0101
+        int z = 5; // Binary: 0000...0101
         System.out.println("Initial y = " + y + " (Binary: " + Integer.toBinaryString(y) + ")");
         System.out.println("Initial z = " + z + " (Binary: " + Integer.toBinaryString(z) + ")");
 
@@ -72,16 +72,27 @@ public class CompoundAssignmentDemo {
         System.out.println("\nInitial shiftVal = " + shiftVal + " (Binary: " + Integer.toBinaryString(shiftVal) + ")");
 
         shiftVal <<= 2; // Equivalent to: shiftVal = shiftVal << 2; (10000 << 2 = 1000000)
-        System.out.println("shiftVal <<= 2; => shiftVal = " + shiftVal + " (Binary: " + Integer.toBinaryString(shiftVal) + ")"); // shiftVal is now 64
+        System.out.println(
+                "shiftVal <<= 2; => shiftVal = " + shiftVal + " (Binary: " + Integer.toBinaryString(shiftVal) + ")"); // shiftVal
+                                                                                                                      // is
+                                                                                                                      // now
+                                                                                                                      // 64
 
         shiftVal = 64; // Reset shiftVal
         shiftVal >>= 3; // Equivalent to: shiftVal = shiftVal >> 3; (1000000 >> 3 = 1000)
-        System.out.println("shiftVal >>= 3; => shiftVal = " + shiftVal + " (Binary: " + Integer.toBinaryString(shiftVal) + ")"); // shiftVal is now 8
+        System.out.println(
+                "shiftVal >>= 3; => shiftVal = " + shiftVal + " (Binary: " + Integer.toBinaryString(shiftVal) + ")"); // shiftVal
+                                                                                                                      // is
+                                                                                                                      // now
+                                                                                                                      // 8
 
         shiftVal = -64; // Binary: ...11000000
         System.out.println("Initial shiftVal = " + shiftVal + " (Binary: " + Integer.toBinaryString(shiftVal) + ")");
         shiftVal >>>= 4; // Equivalent to: shiftVal = shiftVal >>> 4;
-        System.out.println("shiftVal >>>= 4; => shiftVal = " + shiftVal + " (Binary: " + Integer.toBinaryString(shiftVal) + ")"); // Large positive number
+        System.out.println(
+                "shiftVal >>>= 4; => shiftVal = " + shiftVal + " (Binary: " + Integer.toBinaryString(shiftVal) + ")"); // Large
+                                                                                                                       // positive
+                                                                                                                       // number
 
         System.out.println("\n-------------------------------------------------");
         System.out.println("--- End of Compound Assignment Demo ---");

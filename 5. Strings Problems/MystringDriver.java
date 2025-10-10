@@ -487,17 +487,14 @@ class Mystring {
         return str;
     }
 
-    public Mystring[] toCharArray(Mystring str){
-         
-         Mystring[] charArr = new Mystring[str.length()];
-         for(int i =0;i<str.length();i++)
-         {
+    public Mystring[] toCharArray(Mystring str) {
+
+        Mystring[] charArr = new Mystring[str.length()];
+        for (int i = 0; i < str.length(); i++) {
             charArr[i] = new Mystring(new char[] { str.charAt(i) });
-         }
+        }
 
-
-
-         return charArr;
+        return charArr;
     }
 }
 
@@ -526,24 +523,22 @@ public class MystringDriver {
         Mystring r1 = new Mystring("h");
         Mystring r2 = new Mystring("b");
 
-         System.out.println("------------replace()--------------");
+        System.out.println("------------replace()--------------");
 
-        System.out.println(str.replace('h','b'));
+        System.out.println(str.replace('h', 'b'));
 
         System.out.println("------------replaceFirst()-------------------");
         System.out.println(str.replaceFirst(r1, r2));
 
         System.out.println("------------replaceAll()-------------------");
-    
+
         System.out.println(str.replaceAll(r1, r2));
 
         System.out.println(java.util.Arrays.toString(new String("My name is Sarang").toCharArray()));
 
         System.out.println("------------------toCharArray()--------------------------");
 
-        System.out.println(  java.util.Arrays.toString( str.toCharArray(new Mystring("My name is Sarnag")) ));
-       
-
+        System.out.println(java.util.Arrays.toString(str.toCharArray(new Mystring("My name is Sarnag"))));
 
     }
 }

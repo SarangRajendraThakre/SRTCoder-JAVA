@@ -1,14 +1,13 @@
 import java.util.Arrays;
 
-
-public class A6_Arrays_Method_ToString{
+public class A6_Arrays_Method_ToString {
 
     public static void main(String[] args) {
 
         // --- First Example: 2D Array ---
         System.out.println("--- 2D Array Example ---");
         int[] arr = {
-          3,4,3,2,2,4,34,3
+                3, 4, 3, 2, 2, 4, 34, 3
         };
 
         // Using deepToString() to print the contents of the 2D array
@@ -21,14 +20,14 @@ public class A6_Arrays_Method_ToString{
         // Note: The declaration must be int[][][] to match the 3D initialization.
         System.out.println("--- 3D Array Example ---");
         int[][][] arr1 = {
-            {
-                {1, 2},
-                {3, 4, 5}
-            },
-            {
-                {6},
-                {7, 8, 9, 10}
-            }
+                {
+                        { 1, 2 },
+                        { 3, 4, 5 }
+                },
+                {
+                        { 6 },
+                        { 7, 8, 9, 10 }
+                }
         };
 
         // Using deepToString() to print the contents of the 3D array

@@ -49,7 +49,8 @@ public class P1_PrimitiveOperations {
         String str1 = "SRT";
         String str2 = "Coder";
         String result_str_str = str1 + str2;
-        System.out.println("\"" + str1 + "\" (String) + \"" + str2 + "\" (String) = \"" + result_str_str + "\" (String)");
+        System.out
+                .println("\"" + str1 + "\" (String) + \"" + str2 + "\" (String) = \"" + result_str_str + "\" (String)");
 
         // int + String -> String (concatenation)
         int num = 123;
@@ -62,7 +63,6 @@ public class P1_PrimitiveOperations {
         String boolStrResult = boolVal + text;
         System.out.println(boolVal + " (boolean) + \"" + text + "\" (String) = \"" + boolStrResult + "\" (String)");
 
-
         System.out.println("\n--- Subtraction (-) Operations ---");
         // byte - byte -> int
         System.out.println(b1 + " (byte) - " + b2 + " (byte) = " + (b1 - b2) + " (int)");
@@ -74,14 +74,12 @@ public class P1_PrimitiveOperations {
         // double - float -> double
         System.out.println(d1 + " (double) - " + f1 + " (float) = " + (d1 - f1) + " (double)");
 
-
         System.out.println("\n--- Multiplication (*) Operations ---");
         // int * byte -> int
         System.out.println(i1 + " (int) * " + b1 + " (byte) = " + (i1 * b1) + " (int)");
 
         // float * long -> float
         System.out.println(f1 + " (float) * " + l1 + " (long) = " + (f1 * l1) + " (float)");
-
 
         System.out.println("\n--- Division (/) Operations ---");
         // int / int (integer division)
@@ -90,7 +88,6 @@ public class P1_PrimitiveOperations {
         // double / int -> double
         System.out.println(d1 + " (double) / " + i2 + " (int) = " + (d1 / i2) + " (double)");
 
-
         System.out.println("\n--- Modulus (%) Operations ---");
         // int % int
         System.out.println(i1 + " (int) % " + i2 + " (int) = " + (i1 % i2) + " (int)");
@@ -98,21 +95,21 @@ public class P1_PrimitiveOperations {
         // float % float
         System.out.println(f1 + " (float) % " + f2 + " (float) = " + (f1 % f2) + " (float)");
 
-
         System.out.println("\n--- Demonstrating Compile Time Errors (Uncomment to see) ---");
         /*
-        // boolean + int -> CTE
-        boolean flag = true;
-        int num2 = 5;
-        // int error1 = flag + num2; // This line would cause a Compile Time Error
-
-        // String - int -> CTE
-        String str3 = "Test";
-        // String error2 = str3 - num2; // This line would cause a Compile Time Error
-
-        // int * boolean -> CTE
-        // int error3 = num2 * flag; // This line would cause a Compile Time Error
-        */
-        System.out.println("Arithmetic operations with boolean or (non-plus) String operands will cause Compile Time Errors.");
+         * // boolean + int -> CTE
+         * boolean flag = true;
+         * int num2 = 5;
+         * // int error1 = flag + num2; // This line would cause a Compile Time Error
+         * 
+         * // String - int -> CTE
+         * String str3 = "Test";
+         * // String error2 = str3 - num2; // This line would cause a Compile Time Error
+         * 
+         * // int * boolean -> CTE
+         * // int error3 = num2 * flag; // This line would cause a Compile Time Error
+         */
+        System.out.println(
+                "Arithmetic operations with boolean or (non-plus) String operands will cause Compile Time Errors.");
     }
 }

@@ -1,5 +1,4 @@
 
-package StaticMembers;
 // BindingDemo.java
 // This is the main public class, and its name must match the file name.
 public class StaticMethodBindingDemo {

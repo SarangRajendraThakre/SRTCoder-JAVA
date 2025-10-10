@@ -9,8 +9,24 @@ public class P8_FindFactorialOfAllElement {
         System.out.println(Arrays.toString(arr));
     }
 
-    public static void findFactorial(int[] arr) {
+    // public static void findFactorial(int[] arr) {
 
+    // for (int i = 0; i < arr.length; i++) {
+    // int num = arr[i];
+
+    // if (num == 0 || num == 1) {
+    // arr[i] = 1;
+    // continue;
+    // }
+
+    // long factorial = 1;
+    // for (int j = 2; j <= num; j++) {
+    // factorial *= j;
+    // }
+    // arr[i] = (int) factorial;
+    // }
+
+    public static void findFactorial(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             int num = arr[i];
 
@@ -20,24 +36,14 @@ public class P8_FindFactorialOfAllElement {
             }
 
             long factorial = 1;
-            for (int j = 2; j <= num; j++) {
+
+            for (int j = 2; j <=num ; j++) {
                 factorial *= j;
+
             }
             arr[i] = (int) factorial;
+
         }
     }
-
-    // public static void findFactorial(int [] arr)
-    // {
-    // for(int i = 0 , fact = 1;i<arr.length ;i++ , fact=1)
-    // {
-    // for(int j = arr[i];j>0;j--)
-    // {
-    // fact *= j;
-
-    // }
-    // arr[i] = fact;
-    // }
-    // }
 
 }

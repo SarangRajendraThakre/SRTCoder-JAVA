@@ -4,7 +4,6 @@ public class P170_Boxing {
     @SuppressWarnings("removal")
     public static void main(String[] args) {
 
-        
         int num = 123;
 
         Integer obj1 = new Integer(num);
@@ -15,5 +14,3 @@ public class P170_Boxing {
         System.out.println(obj2);
     }
 }
-
-

@@ -2,29 +2,23 @@ import java.util.Arrays;
 
 public class P4_mergingOfArrays {
 
-    public static void main(String[] args) {
-        
-        int [] a= {1,2,3,4,5,6};
-        int [] b= {1,2,3,4,5,6};
-        int []c = new int[a.length + b.length];
+  public static void main(String[] args) {
 
-        for(int i = 0 , j = 0 ;i<c.length ;i++)
-        {
-            if(i < a.length)
-            {
-              c[i]=a[i];
+    int[] a = { 1, 2, 3, 4, 5, 6 };
+    int[] b = { 1, 2, 3, 4, 5, 6 };
+    int[] c = new int[a.length + b.length];
 
-            }
-            else
-            {
-              c[i] = b[j++];
-            }
-        }
+    for (int i = 0, j = 0; i < c.length; i++) {
+      if (i < a.length) {
+        c[i] = a[i];
 
-        System.out.println(Arrays.toString(c));
-
-        
-
+      } else {
+        c[i] = b[j++];
+      }
     }
-    
+
+    System.out.println(Arrays.toString(c));
+
+  }
+
 }

@@ -1,6 +1,4 @@
 
-
-
 public class P181_VarargsAddition {
 
     // This method uses varargs to accept zero or more integer arguments.
@@ -13,13 +11,13 @@ public class P181_VarargsAddition {
         for (int number : numbers) {
             sum += number; // Add the current number to the sum
         }
-        
+
         return sum;
     }
 
     public static void main(String[] args) {
         // Let's call the add method with different numbers of arguments.
-        
+
         int sum1 = add(5, 10);
         System.out.println("The sum of 5 and 10 is: " + sum1);
 
@@ -28,7 +26,7 @@ public class P181_VarargsAddition {
 
         int sum3 = add(100);
         System.out.println("The sum of just 100 is: " + sum3);
-        
+
         int sum4 = add(); // Calling with no arguments
         System.out.println("The sum with no numbers is: " + sum4);
     }

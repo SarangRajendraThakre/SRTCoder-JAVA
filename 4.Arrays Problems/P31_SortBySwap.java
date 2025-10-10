@@ -25,9 +25,10 @@ public class P31_SortBySwap {
             }
             // IMPORTANT: If you pass characters other than '3', '6', '7',
             // this else block will prevent an infinite loop by moving mid forward.
-            // However, the elements not being '3', '6', or '7' will not be sorted predictably.
+            // However, the elements not being '3', '6', or '7' will not be sorted
+            // predictably.
             // else {
-            //     mid++; // Optional: Move mid if character is not 3, 6, or 7.
+            // mid++; // Optional: Move mid if character is not 3, 6, or 7.
             // }
         }
         List<Character> result = new ArrayList<>();
@@ -50,12 +51,13 @@ public class P31_SortBySwap {
             // Take the first character of each "string" part (e.g., "3" -> '3')
             // This also handles cases where user might type "3" instead of just "3"
             if (!strChars[i].isEmpty()) { // Avoids issues with multiple leading/trailing spaces
-                 arr[i] = strChars[i].charAt(0);
+                arr[i] = strChars[i].charAt(0);
             } else {
-                // Handle empty string if split resulted in one (e.g., "  3" -> "", "3")
+                // Handle empty string if split resulted in one (e.g., " 3" -> "", "3")
                 // You might want to skip or throw an error depending on strictness
                 System.err.println("Warning: Empty element found. Skipping or handling as needed.");
-                // For this example, we'll just continue, but a more robust solution might re-size the array
+                // For this example, we'll just continue, but a more robust solution might
+                // re-size the array
                 // or validate input more strictly.
             }
         }
@@ -65,7 +67,7 @@ public class P31_SortBySwap {
         for (char c : sortedArr) {
             System.out.print(c + " ");
         }
-        System.out.println(); 
+        System.out.println();
         scanner.close(); // Close the scanner to prevent resource leaks
     }
 }

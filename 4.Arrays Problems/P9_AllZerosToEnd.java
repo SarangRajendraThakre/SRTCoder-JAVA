@@ -22,7 +22,7 @@ public class P9_AllZerosToEnd {
 
         // System.out.println(Arrays.toString(arr));
 
-        for (int i = 0; i < arr.length ; i++) {
+        for (int i = 0; i < arr.length; i++) {
             if (arr[i] == 0) {
                 for (int j = i + 1; j < arr.length; j++) {
                     if (arr[j] != 0) {

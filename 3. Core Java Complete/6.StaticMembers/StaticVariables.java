@@ -1,4 +1,3 @@
-package StaticMembers;
 
 class Mobile {
 

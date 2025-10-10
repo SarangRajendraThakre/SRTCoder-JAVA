@@ -1,3 +1,7 @@
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.OptionalInt;
+
 public class P19_SecondLargestElement {
 
     public static void main(String[] args) {
@@ -16,7 +20,35 @@ public class P19_SecondLargestElement {
             }
         }
 
+        usingTheStreamApi(arr);
+
         System.out.println("The first maximum Element is " + firstMax + " Second max Element is " + secondMax);
 
     }
+
+    // public static void usingTheStreamApi(int[] arr) {
+    // int secondLargest = Arrays.stream(arr)
+    // .boxed() // convert IntStream → Stream<Integer>
+    // .distinct()
+    // .sorted(Comparator.reverseOrder())
+    // .skip(1)
+    // .findFirst()
+    // .orElseThrow(() -> new IllegalArgumentException("No Second Largest Element"));
+
+    // System.out.println(secondLargest);
+    // }
+
+    public static void usingTheStreamApi(int[] arr) {
+        OptionalInt secondLargest = Arrays.stream(arr)
+                .distinct()
+                .boxed()
+                .sorted(Comparator.reverseOrder())
+                .skip(1)
+                .mapToInt(Integer::intValue)
+                .findFirst();
+
+        System.out.println(secondLargest.getAsInt());
+
+    }
+
 }

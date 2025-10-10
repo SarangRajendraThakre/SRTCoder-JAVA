@@ -17,14 +17,13 @@ class Product {
     }
 }
 
-
 public class A9_Arrays_Method_BinarySearch_Comparator {
     public static void main(String[] args) {
         Product[] products = {
-            new Product("Milk", 80),
-            new Product("Bread", 120),
-            new Product("Butter", 250),
-            new Product("Cheese", 400)
+                new Product("Milk", 80),
+                new Product("Bread", 120),
+                new Product("Butter", 250),
+                new Product("Cheese", 400)
         };
 
         // Here, T becomes the 'Product' type.
@@ -39,9 +38,9 @@ public class A9_Arrays_Method_BinarySearch_Comparator {
         Product searchKey = new Product("dummy", 250);
 
         int index = Arrays.binarySearch(
-            products,          // T[] a: The array of Products
-            searchKey,         // T key: The Product we're looking for
-            priceComparator    // Comparator<? super T> c: The logic for comparison
+                products, // T[] a: The array of Products
+                searchKey, // T key: The Product we're looking for
+                priceComparator // Comparator<? super T> c: The logic for comparison
         );
 
         if (index >= 0) {

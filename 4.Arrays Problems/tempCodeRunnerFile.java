@@ -1,0 +1,3 @@
+
+        duplicateElementBruteForceOptimize(arr);
+        duplicateElementHashMap(arr);

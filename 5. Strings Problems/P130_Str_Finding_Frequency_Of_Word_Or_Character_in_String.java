@@ -7,7 +7,7 @@ public class P130_Str_Finding_Frequency_Of_Word_Or_Character_in_String {
 
         String str = "I am srtCoder , you understand srtCoder";
 
-        String[] StringArr = str.split("");
+        String[] StringArr = str.split(" ");
 
         String result = "";
 
@@ -25,7 +25,7 @@ public class P130_Str_Finding_Frequency_Of_Word_Or_Character_in_String {
                 }
 
             }
-            if(cnt >= 2 && !(StringArr[i].equals(" ")))
+            if(cnt >= 0 && !(StringArr[i].equals(" ")))
             {
                 System.out.println(StringArr[i]+" : " +cnt);
 

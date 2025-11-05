@@ -1,0 +1,63 @@
+# ----------------------------------------
+# 1. IDE & BUILD ARTIFACTS (ALWAYS IGNORE)
+# ----------------------------------------
+
+# Maven Build Output
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Gradle Build Output (if used)
+/build/
+
+# Java Compiled Files
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+
+# ----------------------------------------
+# 2. ECLIPSE SPECIFIC CONFIGURATION
+# ----------------------------------------
+
+# Eclipse Project Files
+.project
+.classpath
+.settings/
+
+# Eclipse/STS Target & Log Files
+bin/
+*.log
+
+# ----------------------------------------
+# 3. VS CODE SPECIFIC CONFIGURATION
+# ----------------------------------------
+
+# VS Code Metadata
+.vscode/
+
+# ----------------------------------------
+# 4. OPERATING SYSTEM & HISTORY FILES
+# ----------------------------------------
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Eclipse Local History (workspace metadata)
+.metadata/
+
+# ----------------------------------------
+# 5. YOUR SPECIFIC FOLDER EXCLUSIONS
+# ----------------------------------------
+
+# Your image folder (as previously identified)
+*images/
+
+# Ignore any files ending with .class in any directory (Crucial for Java)
+*.class

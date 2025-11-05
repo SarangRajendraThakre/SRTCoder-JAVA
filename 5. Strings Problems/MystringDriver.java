@@ -157,6 +157,7 @@ class Mystring {
                 return false;
             }
         }
+
         return true;
     }
 
@@ -169,6 +170,7 @@ class Mystring {
         }
         for (int i = suffix.length() - 1, j = arr.length - 1; i >= 0; i--, j--) {
             if (arr[j] != suffix.charAt(i)) {
+
                 return false;
             }
         }

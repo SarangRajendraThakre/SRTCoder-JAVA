@@ -1,3 +1,6 @@
 
-        duplicateElementBruteForceOptimize(arr);
-        duplicateElementHashMap(arr);
+            }
+            result[i]=product;
+            
+        }
+        return result;

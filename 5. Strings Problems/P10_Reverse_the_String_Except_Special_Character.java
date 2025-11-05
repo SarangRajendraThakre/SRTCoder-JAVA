@@ -37,7 +37,7 @@ public class P10_Reverse_the_String_Except_Special_Character {
 
 
 
-    // public static String reverseStringAndCheck(String s)
+    public static String reverseStringAndCheck(String s)
     {
         int left = 0 ;
         int right = s.length()-1;
@@ -62,8 +62,7 @@ public class P10_Reverse_the_String_Except_Special_Character {
             left++;
             right--;
 
-          
-            
+        
          }
          return new String(chars);
     }

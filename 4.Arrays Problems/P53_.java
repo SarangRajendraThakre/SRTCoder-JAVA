@@ -6,7 +6,7 @@ public class P53_ {
 
          int number = 789;
 
-          reverse( number );
+       
 
 
     }

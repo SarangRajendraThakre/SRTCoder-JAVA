@@ -1,6 +1,8 @@
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class P12_DistinctElementInArray {
 
@@ -14,6 +16,9 @@ public class P12_DistinctElementInArray {
 
         System.out.println("\n--- Method 2: Using HashMap (Efficient Way) ---");
         findFrequencyUsingHashMap(arr);
+
+        System.out.println("\n--- Method 3: Using Stream API ---");
+        findFrequencyUsingStreamAPI(arr);
     }
 
     // 🔹 Method 1: Using Nested Loops and Boolean Array
@@ -37,28 +42,27 @@ public class P12_DistinctElementInArray {
     }
 
     // 🔹 Method 2: Using HashMap
-    // public static void findFrequencyUsingHashMap(int[] arr) {
-    // Map<Integer, Integer> freq = new HashMap<>();
-
-    // for (int num : arr) {
-    // freq.put(num, freq.getOrDefault(num, 0) + 1);
-    // }
-
-    // for (Map.Entry<Integer, Integer> entry : freq.entrySet()) {
-    // System.out.println(entry.getKey() + " : " + entry.getValue());
-    // }
-    // }
-
     public static void findFrequencyUsingHashMap(int[] arr) {
         HashMap<Integer, Integer> map = new HashMap<>();
 
-        for (int i = 0; i < arr.length; i++) {
-            map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
+        for (int num : arr) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
         }
+
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
             System.out.println(entry.getKey() + " : " + entry.getValue());
         }
-
     }
 
+    // 🔹 Method 3: Using Stream API
+    public static void findFrequencyUsingStreamAPI(int[] arr) {
+        Map<Integer, Long> freqMap = Arrays.stream(arr)
+                .boxed() // Convert int → Integer
+                .collect(Collectors.groupingBy(
+                        Function.identity(), // group by element value
+                        Collectors.counting() // count each occurrence
+                ));
+
+        freqMap.forEach((key, value) -> System.out.println(key + " : " + value));
+    }
 }

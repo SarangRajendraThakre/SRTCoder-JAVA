@@ -1,18 +1,24 @@
-
+import java.util.HashSet;
+import java.util.Set;
 
 public class P46_unique_pair_of_element {
     public static void main(String[] args) {
-        // Define the integer array
-        int[] arr = {10, 20, 30, 40};
+        int[] arr = { 10, 20, 10, 30, 20 };
+        Set<String> seenPairs = new HashSet<>();
 
-        System.out.println("All possible unique pairs from the array are:");
+        System.out.println("All unique pairs ignoring duplicates:");
 
-        // Outer loop to pick the first element of the pair
         for (int i = 0; i < arr.length; i++) {
-            // Inner loop to pick the second element of the pair
-            // j starts from i + 1 to avoid duplicate pairs (e.g., 20 10) and self-pairs (e.g., 10 10)
             for (int j = i + 1; j < arr.length; j++) {
-                System.out.println(arr[i] + " " + arr[j]);
+                int a = arr[i];
+                int b = arr[j];
+                // Sort pair so that (10 20) and (20 10) are treated the same
+                String pair = a < b ? a + "," + b : b + "," + a;
+
+                if (!seenPairs.contains(pair)) {
+                    seenPairs.add(pair);
+                    System.out.println(a + " " + b);
+                }
             }
         }
     }

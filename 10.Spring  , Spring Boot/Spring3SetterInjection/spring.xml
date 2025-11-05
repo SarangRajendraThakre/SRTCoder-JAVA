@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Address Bean -->
+    <bean id="address1" class="com.srt.Address">
+        <property name="city" value="Wardha" />
+        <property name="pincode" value="442001" />
+    </bean>
+
+
+    <!-- Employee Bean -->
+    <bean id="employee1" class="com.srt.Employee">
+        <property name="name" value="srt" />
+        <property name="empno" value="56" />
+        <property name="phoneNo" value="453453244" />
+        <property name="isMarried" value="True" />
+        <property name="height" value="6" />
+        <property name="address" ref="address1" />
+        <property name="pllist">
+            <list>
+                <value>Java</value>
+                <value>Python</value>
+                <value>C++</value>
+                <value>SQL</value>
+            </list>
+        </property>
+        <property name="education" >
+         <map>
+         <entry key="10th" value="80" />
+           <entry> 
+            <key>
+            <value>12th</value>
+            </key>
+            <value>70</value>
+           </entry>
+           <entry key="Btech" value="8.0"></entry>
+         </map>
+        </property>
+       
+       <property name="carSet">
+         <set>
+           <value>lamborgini</value>
+           <value>lexus</value>
+           <value>Fortuner</value>
+           <value>lamborgini</value>
+           <value>Fortuner</value>
+         </set>
+       </property> 
+        
+    </bean>
+    
+
+    <!-- Reusable Map Bean 
+    <bean id="marksMap" class="java.util.HashMap">
+        <constructor-arg>
+            <map>
+                <entry key="10th" value="85" />
+                <entry key="12th" value="70" />
+            </map>
+        </constructor-arg>
+    </bean>  -->
+
+</beans>

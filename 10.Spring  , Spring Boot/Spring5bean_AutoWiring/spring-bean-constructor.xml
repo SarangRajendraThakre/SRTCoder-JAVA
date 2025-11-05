@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+   <bean id="doctor" class="com.srt.Constructor.Doctor" >
+     <property name="doctorName" value="Dr. Vidya"  ></property>
+   </bean>
+<!--   <bean id="doctor1" class="com.srt.Constructor.Doctor" primary="true" >-->
+<!--     <property name="doctorName" value="Dr. Rajendra"  ></property>-->
+<!--   </bean>-->
+<!--   <bean id="doctor2" class="com.srt.Constructor.Doctor" >-->
+<!--     <property name="doctorName" value="Dr. Yadnesh"  ></property>-->
+<!--   </bean>-->
+
+  
+   <bean id="patient" class="com.srt.Constructor.Patient">
+     <property name="patientName" value="Sarang"></property>
+   </bean>
+
+
+
+  <bean id="hospital" class="com.srt.Constructor.Hospital" autowire="constructor"></bean>
+
+
+
+
+
+</beans>
+
+
+
+
+
+
+

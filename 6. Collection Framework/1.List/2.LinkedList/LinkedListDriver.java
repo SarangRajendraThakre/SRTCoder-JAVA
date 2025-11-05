@@ -191,18 +191,15 @@ class MyLinkedList<E> implements List<E> {
             // tail = newTail;
             // tail.next = null;
 
+            Node<E> newTail = head;
+            for (int i = 0; i < size() - 2; i++) {
+                newTail = newTail.next;
+            }
 
-               Node<E> newTail = head;
-        for (int i = 0; i < size() - 2; i++) {
-            newTail = newTail.next;
-        }
-        
-             tail = newTail;
-             
+            tail = newTail;
+
             tail.next = null;
 
-
-            
         }
         size--;
         return element;

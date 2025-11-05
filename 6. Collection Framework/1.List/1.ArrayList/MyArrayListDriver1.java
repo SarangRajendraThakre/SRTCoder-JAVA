@@ -62,7 +62,6 @@ class MyArrayList<E> {
     public E get(int index) {
         checkIndex(index);
         return arr[index];
-
     }
 
     public E set(int index, E element) {
@@ -87,14 +86,25 @@ class MyArrayList<E> {
         return true;
     }
 
+
     public int indexOf(E element) {
-        for (int i = 0; i < size(); i++) {
-            if (element.equals(arr[i]))
-                return i;
+        if (element == null) {
+            for (int i = 0; i < size(); i++) if (arr[i] == null) return i;
+        } else {
+            for (int i = 0; i < size(); i++) if (element.equals(arr[i])) return i;
         }
         return -1;
-
     }
+
+    public int lastIndexOf(E element) {
+        if (element == null) {
+            for (int i = size() - 1; i >= 0; i--) if (arr[i] == null) return i;
+        } else {
+            for (int i = size() - 1; i >= 0; i--) if (element.equals(arr[i])) return i;
+        }
+        return -1;
+    }
+
 
     public boolean contains(E element) {
         return indexOf(element) >= 0;
@@ -187,32 +197,26 @@ class MyArrayList<E> {
 
     }
 
-    public boolean addAll(int index , MyArrayList<E> collection )
-    {
+    public boolean addAll(int index, MyArrayList<E> collection) {
         checkIndexForAdd(index);
-        ensureCapacity(size()+ collection.size() );
+        ensureCapacity(size() + collection.size());
 
-       System.arraycopy(arr, index, arr, index + collection.size() , this.size() - index);
+        System.arraycopy(arr, index, arr, index + collection.size(), this.size() - index);
 
-       MyArrayList<E> list =( MyArrayList<E>) collection;
+        MyArrayList<E> list = (MyArrayList<E>) collection;
 
-       System.arraycopy(list.arr, 0, arr, index, collection.size());
+        System.arraycopy(list.arr, 0, arr, index, collection.size());
 
-       this.index += collection.size();
+        this.index += collection.size();
 
-       return true;
-
-
-
+        return true;
 
     }
 
-    public MyArrayList<E> subList(int fromIndex , int toIndex)
-    {
+    public MyArrayList<E> subList(int fromIndex, int toIndex) {
 
         MyArrayList<E> sub = new MyArrayList();
-        for(int i = fromIndex ;i<toIndex;i++)
-        {
+        for (int i = fromIndex; i < toIndex; i++) {
             sub.add(arr[i]);
         }
         return sub;
@@ -248,8 +252,6 @@ public class MyArrayListDriver1<E> {
         list.add(30);
         System.out.println(list);
 
-
-
         MyArrayList<Integer> list2 = new MyArrayList();
         list2.add(90);
         list2.add(450);
@@ -259,9 +261,6 @@ public class MyArrayListDriver1<E> {
 
         list.addAll(1, list2);
         System.out.println(list);
-
-    
-
 
     }
 

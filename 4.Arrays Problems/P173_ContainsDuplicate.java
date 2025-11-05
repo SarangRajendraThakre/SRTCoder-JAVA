@@ -21,5 +21,4 @@ public class P173_ContainsDuplicate {
     }
 }
 
-
 // https://leetcode.com/problems/contains-duplicate/

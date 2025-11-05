@@ -8,36 +8,27 @@ public class P19_SecondLargestElement {
 
         int[] arr = { 3, 4, 54, 6, 4, 43, 4, 34, 3, 5, 23, 2, 32, 32, 35, 6, 3, 34, 43, 3, 43, 34 };
 
+        // --- Using Loop ---
         int firstMax = Integer.MIN_VALUE;
         int secondMax = Integer.MIN_VALUE;
 
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > firstMax) {
+        for (int num : arr) {
+            if (num > firstMax) {
                 secondMax = firstMax;
-                firstMax = arr[i];
-            } else if (arr[i] > secondMax) {
-                secondMax = arr[i];
+                firstMax = num;
+            } else if (num > secondMax && num < firstMax) { // ✅ fix for duplicates
+                secondMax = num;
             }
         }
 
+        System.out.println("First Max (Loop): " + firstMax);
+        System.out.println("Second Max (Loop): " + secondMax);
+
+        // --- Using Stream API ---
         usingTheStreamApi(arr);
-
-        System.out.println("The first maximum Element is " + firstMax + " Second max Element is " + secondMax);
-
     }
 
-    // public static void usingTheStreamApi(int[] arr) {
-    // int secondLargest = Arrays.stream(arr)
-    // .boxed() // convert IntStream → Stream<Integer>
-    // .distinct()
-    // .sorted(Comparator.reverseOrder())
-    // .skip(1)
-    // .findFirst()
-    // .orElseThrow(() -> new IllegalArgumentException("No Second Largest Element"));
-
-    // System.out.println(secondLargest);
-    // }
-
+    // 🔹 Using Stream API
     public static void usingTheStreamApi(int[] arr) {
         OptionalInt secondLargest = Arrays.stream(arr)
                 .distinct()
@@ -47,8 +38,6 @@ public class P19_SecondLargestElement {
                 .mapToInt(Integer::intValue)
                 .findFirst();
 
-        System.out.println(secondLargest.getAsInt());
-
+        System.out.println("Second Largest (Stream API): " + secondLargest.getAsInt());
     }
-
 }

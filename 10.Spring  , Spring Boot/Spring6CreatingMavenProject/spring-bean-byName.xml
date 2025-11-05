@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+  <bean  id="product1" class="com.srt.byName.Product"  >
+    
+     <constructor-arg value="101" />
+     <constructor-arg value="Chintu" />
+     <constructor-arg value="150" />
+  </bean>
+  <bean  id="product2" class="com.srt.byName.Product"  >
+    
+     <constructor-arg value="102" />
+     <constructor-arg value="lamborgini" />
+     <constructor-arg value="434543343" />
+  </bean>
+  
+  <bean id="cart" class="com.srt.byName.Cart" autowire="byName"/>
+  <bean id="order" class="com.srt.byName.Order" autowire="byName"/>
+  
+
+  
+ 
+  
+      
+<!--      <property name="product" ref="product1"></property>-->
+
+
+
+
+
+
+
+
+</beans>
+
+
+
+
+
+
+

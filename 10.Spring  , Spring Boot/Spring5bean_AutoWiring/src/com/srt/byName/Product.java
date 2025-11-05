@@ -7,14 +7,10 @@ public class Product {
 	private double productPrice;
 	
 	
-	
-	
-	public Product(int productId, String productName, double productPrice) {
-		super();
-		this.productId = productId;
-		this.productName = productName;
-		this.productPrice = productPrice;
+	public Product() {
+		// TODO Auto-generated constructor stub
 	}
+    
 	
 	
 	public int getProductId() {

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+  <bean id="product1"  class="com.srt.byName.Product" >
+    <property name="productId" value="111"></property>
+    <property name="productName" value="lamborgini"></property>
+    <property name="productPrice" value="435354554"></property>
+    
+    </bean>
+    
+  <bean id="product2"  class="com.srt.byName.Product" >
+    <property name="productId" value="222"></property>
+    <property name="productName" value="lexux"></property>
+    <property name="productPrice" value="43535455455"></property>
+    
+    </bean>
+    
+    <bean id="cart" class="com.srt.byName.Cart" autowire="byName"/>
+    
+    
+    <bean id="order" class="com.srt.byName.Order" autowire="byName"/>
+    
+    
+    
+   
+
+</beans>
+
+
+
+
+
+
+

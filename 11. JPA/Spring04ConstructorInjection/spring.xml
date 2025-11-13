@@ -1,0 +1,170 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>-->
+<!--     <beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xsi:schemaLocation="-->
+<!--           http://www.springframework.org/schema/beans-->
+<!--           http://www.springframework.org/schema/beans/spring-beans.xsd">-->
+
+<!--     Address Bean -->
+<!--    <bean id="address1" class="com.srt.Address">-->
+<!--        <constructor-arg value="wardha" />-->
+<!--        <constructor-arg value="442001" />-->
+<!--    </bean>-->
+
+<!--     Marks Map Bean -->
+<!--    <bean id="marksMap" class="java.util.HashMap">-->
+<!--        <constructor-arg>-->
+<!--            <map>-->
+<!--                <entry key="10th" value="85" />-->
+<!--                <entry key="12th" value="70" />-->
+<!--            </map>-->
+<!--        </constructor-arg>-->
+<!--    </bean>-->
+
+<!--     Employee Bean -->
+<!--    <bean id="employee1" class="com.srt.Employee">-->
+<!--        <constructor-arg index="0" value="srt" />                  String name -->
+<!--        <constructor-arg index="1" value="56" />                   int empno -->
+<!--        <constructor-arg index="2" value="453453244" />            long phoneNo -->
+<!--        <constructor-arg index="3" value="true" />                 Boolean isMarried -->
+<!--        <constructor-arg index="4" value="6.0" />                  double height -->
+<!--        <constructor-arg index="5" ref="address1" />               Address address -->
+
+<!--        <constructor-arg index="6">-->
+<!--            <list>-->
+<!--                <value>Java</value>-->
+<!--                <value>Python</value>-->
+<!--                <value>C++</value>-->
+<!--                <value>SQL</value>-->
+<!--            </list>-->
+<!--        </constructor-arg>-->
+
+<!--        <constructor-arg index="7">-->
+<!--            <set>-->
+<!--                <value>Lamborghini</value>-->
+<!--                <value>Lexus</value>-->
+<!--                <value>Fortuner</value>-->
+<!--            </set>-->
+<!--        </constructor-arg>-->
+
+<!--        <constructor-arg index="8" ref="marksMap" />               Map<String, Float> education -->
+<!--    </bean>-->
+
+<!--</beans>  -->
+
+
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xsi:schemaLocation="-->
+<!--           http://www.springframework.org/schema/beans-->
+<!--           http://www.springframework.org/schema/beans/spring-beans.xsd">-->
+
+<!--     Address Bean -->
+<!--    <bean id="address1" class="com.srt.Address">-->
+<!--        <constructor-arg value="wardha" />-->
+<!--        <constructor-arg value="442001" />-->
+<!--    </bean>-->
+
+<!--     Marks Map Bean -->
+<!--    <bean id="marksMap" class="java.util.HashMap">-->
+<!--        <constructor-arg>-->
+<!--            <map>-->
+<!--                <entry key="10th" value="85" />-->
+<!--                <entry key="12th" value="70" />-->
+<!--            </map>-->
+<!--        </constructor-arg>-->
+<!--    </bean>-->
+
+<!--     Employee Bean -->
+<!--    <bean id="employee1" class="com.srt.Employee">-->
+<!--        <constructor-arg type="java.lang.String" value="srt" />         name -->
+<!--        <constructor-arg type="int" value="56" />                       empno -->
+<!--        <constructor-arg type="long" value="453453244" />               phoneNo -->
+<!--        <constructor-arg type="java.lang.Boolean" value="true" />       isMarried -->
+<!--        <constructor-arg type="double" value="6.0" />                   height -->
+<!--        <constructor-arg type="com.srt.Address" ref="address1" />       address -->
+
+<!--        <constructor-arg type="java.util.List">-->
+<!--            <list>-->
+<!--                <value>Java</value>-->
+<!--                <value>Python</value>-->
+<!--                <value>C++</value>-->
+<!--                <value>SQL</value>-->
+<!--            </list>-->
+<!--        </constructor-arg>-->
+
+<!--        <constructor-arg type="java.util.Set">-->
+<!--            <set>-->
+<!--                <value>Lamborghini</value>-->
+<!--                <value>Lexus</value>-->
+<!--                <value>Fortuner</value>-->
+<!--            </set>-->
+<!--        </constructor-arg>-->
+
+<!--        <constructor-arg type="java.util.Map" ref="marksMap" />          education -->
+<!--    </bean>-->
+
+<!--</beans>-->
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Address Bean -->
+    <bean id="address1" class="com.srt.Address">
+        <constructor-arg index="0" value="wardha" />
+        <constructor-arg index="1" value="442001" />
+    </bean>
+
+    <!-- Marks Map Bean -->
+    <bean id="marksMap" class="java.util.HashMap">
+        <constructor-arg>
+            <map>
+                <entry key="10th" value="85" />
+                <entry key="12th" value="70" />
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <!-- Employee Bean (Hybrid: index + type) -->
+    <bean id="employee1" class="com.srt.Employee">
+
+        <constructor-arg index="0" type="java.lang.String" value="srt" />          <!-- name -->
+        <constructor-arg index="1" type="int" value="56" />                        <!-- empno -->
+        <constructor-arg index="2" type="long" value="453453244" />                <!-- phoneNo -->
+        <constructor-arg index="3" type="java.lang.Boolean" value="true" />        <!-- isMarried -->
+        <constructor-arg index="4" type="double" value="6.0" />                    <!-- height -->
+        <constructor-arg index="5" type="com.srt.Address" ref="address1" />        <!-- address -->
+
+        <constructor-arg index="6" type="java.util.List">                          <!-- pllist -->
+            <list>
+                <value>Java</value>
+                <value>Python</value>
+                <value>C++</value>
+                <value>SQL</value>
+            </list>
+        </constructor-arg>
+
+        <constructor-arg index="7" type="java.util.Set">                           <!-- carSet -->
+            <set>
+                <value>Lamborghini</value>
+                <value>Lexus</value>
+                <value>Fortuner</value>
+            </set>
+        </constructor-arg>
+
+        <constructor-arg index="8" type="java.util.Map" ref="marksMap" />          <!-- education -->
+
+    </bean>
+
+</beans>
+
+
+
+
+
+
+

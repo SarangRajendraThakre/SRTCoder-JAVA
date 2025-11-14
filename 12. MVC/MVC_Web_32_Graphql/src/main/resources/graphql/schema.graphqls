@@ -1,0 +1,17 @@
+type Product{
+  id: ID
+  name: String
+  category: String
+  price: Float     # Correct: Float (Uppercase)
+  stock: Int       # Correct: Int (Uppercase)
+}
+
+type Query{
+     getProduct: [Product]
+     getProductByCategory(category: String): [Product]
+}
+
+type Mutation{
+     updatePrice(id: ID, price: Float): Product       # Correct: Float (Uppercase)
+     updateNewShipment(id: ID, stock: Int): Product   # Correct: Int (Uppercase)
+}

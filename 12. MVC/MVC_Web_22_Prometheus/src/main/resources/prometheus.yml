@@ -1,0 +1,10 @@
+# prometheus.yml snippet
+scrape_configs:
+  # This is the job name that will show up in Prometheus
+  - job_name: 'spring-boot-app'
+    # Define how often Prometheus should pull data (e.g., every 5 seconds)
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['localhost:8080']  # Replace with your app's host:port
+        # Define the exact path to the metrics endpoint
+        metrics_path: '/actuator/prometheus'
